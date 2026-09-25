@@ -153,6 +153,21 @@
     .button:hover { border-color: var(--cp-border-strong); }
     .button.primary { border-color: var(--cp-accent); background: var(--cp-accent); color: var(--cp-accent-fg); }
     .button.primary:hover { background: var(--cp-accent-hover); }
+    .download-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid var(--cp-accent);
+      border-radius: 0.625rem;
+      background: var(--cp-accent);
+      color: var(--cp-accent-fg);
+      padding: 7px 11px;
+      font-weight: 700;
+      font-size: 0.78rem;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+    .download-link:hover { background: var(--cp-accent-hover); color: var(--cp-accent-fg); text-decoration: none; }
     .content { max-width: 1500px; margin: 0 auto; padding: 28px; }
     .view { display: none; }
     .view.active { display: block; animation: reveal 180ms ease-out; }
@@ -462,6 +477,10 @@
               <button class="button primary" data-jump="pipeline">Review LP pipeline</button>
             </aside>
           </div>
+          <article class="card span-12" style="margin-bottom:18px; display:flex; align-items:center; justify-content:space-between; gap:16px; border-color:var(--cp-accent); background:var(--cp-accent-soft);">
+            <div><strong>Need the source materials?</strong><div class="muted">Open the About & artifacts tab for visible download buttons and explanations of every file in the fund pack.</div></div>
+            <button class="button primary" data-jump="about">View downloads</button>
+          </article>
 
           <div class="grid">
             <article class="card span-3 kpi"><span class="label">Target cumulative ROI</span><strong class="value">30–50%+</strong><span class="trend">High-conviction band</span></article>
@@ -669,16 +688,16 @@
                 <table>
                   <thead><tr><th>Artifact</th><th>Format</th><th>What it contains</th><th>Use it for</th><th>Download</th></tr></thead>
                   <tbody>
-                    <tr><td><strong>Executive overview</strong></td><td>PPTX</td><td>Five-slide investment committee narrative covering thesis, allocation, ramp, and custody.</td><td>IC meetings and executive briefing.</td><td><a href="humanoid_robotics_executive_overview.pptx" download>Download</a></td></tr>
-                    <tr><td><strong>Pitch deck briefing</strong></td><td>PDF</td><td>Detailed strategy memo with risk/return quadrants, basket rationale, and source references.</td><td>Investor diligence and pitch preparation.</td><td><a href="humanoid_robotics_pitch_deck_briefing.pdf" download>Download</a></td></tr>
-                    <tr><td><strong>Valuation model</strong></td><td>XLSX</td><td>Portfolio comps, production schedule, DCF, cash flows, and integrity checks.</td><td>Scenario analysis and valuation review.</td><td><a href="humanoid_robotics_valuation_model.xlsx" download>Download</a></td></tr>
-                    <tr><td><strong>Custody & onboarding guide</strong></td><td>PDF</td><td>Brokerage routes, exchange access, tax forms, FX, permissions, and settlement considerations.</td><td>Operational readiness and account setup.</td><td><a href="investor_custody_and_onboarding_guide.pdf" download>Download</a></td></tr>
-                    <tr><td><strong>IC Q&A prep sheet</strong></td><td>PDF</td><td>Committee objections and defenses for geopolitics, rare earths, yields, OEM dependency, and ASP compression.</td><td>Risk defense and diligence preparation.</td><td><a href="ic_qa_prep_sheet.pdf" download>Download</a></td></tr>
-                    <tr><td><strong>Term sheet summary</strong></td><td>PDF</td><td>Fund terms, target size, fee/carry structure, basket allocation, and LP signature block.</td><td>Offering overview and soft-circle follow-up.</td><td><a href="term_sheet_summary.pdf" download>Download</a></td></tr>
-                    <tr><td><strong>Investor outreach tracker</strong></td><td>PDF</td><td>Conversion funnel, eight-prospect log, engagement duration, commitments, and next actions.</td><td>Fundraising operations and pipeline review.</td><td><a href="investor_outreach_tracking_sheet.pdf" download>Download</a></td></tr>
-                    <tr><td><strong>Investment canvas</strong></td><td>PNG</td><td>Visual risk-versus-return heatmap for the supply-chain quadrants.</td><td>Fast portfolio positioning reference.</td><td><a href="robotics_investment_canvas.png" download>Download</a></td></tr>
-                    <tr><td><strong>Client onboarding email</strong></td><td>MD</td><td>Investor-facing explanation of the thesis, target basket, timeline, and onboarding protocol.</td><td>Customize for investor outreach.</td><td><a href="client_onboarding_email_draft.md" download>Download</a></td></tr>
-                    <tr><td><strong>Source pack index</strong></td><td>HTML</td><td>Original portal page listing the supplied deliverables.</td><td>Navigate the source materials.</td><td><a href="fund-pack-index.html" download>Download</a></td></tr>
+                    <tr><td><strong>Executive overview</strong></td><td>PPTX</td><td>Five-slide investment committee narrative covering thesis, allocation, ramp, and custody.</td><td>IC meetings and executive briefing.</td><td><a class="download-link" href="humanoid_robotics_executive_overview.pptx" download>Download PPTX</a></td></tr>
+                    <tr><td><strong>Pitch deck briefing</strong></td><td>PDF</td><td>Detailed strategy memo with risk/return quadrants, basket rationale, and source references.</td><td>Investor diligence and pitch preparation.</td><td><a class="download-link" href="humanoid_robotics_pitch_deck_briefing.pdf" download>Download PDF</a></td></tr>
+                    <tr><td><strong>Valuation model</strong></td><td>XLSX</td><td>Portfolio comps, production schedule, DCF, cash flows, and integrity checks.</td><td>Scenario analysis and valuation review.</td><td><a class="download-link" href="humanoid_robotics_valuation_model.xlsx" download>Download XLSX</a></td></tr>
+                    <tr><td><strong>Custody & onboarding guide</strong></td><td>PDF</td><td>Brokerage routes, exchange access, tax forms, FX, permissions, and settlement considerations.</td><td>Operational readiness and account setup.</td><td><a class="download-link" href="investor_custody_and_onboarding_guide.pdf" download>Download PDF</a></td></tr>
+                    <tr><td><strong>IC Q&A prep sheet</strong></td><td>PDF</td><td>Committee objections and defenses for geopolitics, rare earths, yields, OEM dependency, and ASP compression.</td><td>Risk defense and diligence preparation.</td><td><a class="download-link" href="ic_qa_prep_sheet.pdf" download>Download PDF</a></td></tr>
+                    <tr><td><strong>Term sheet summary</strong></td><td>PDF</td><td>Fund terms, target size, fee/carry structure, basket allocation, and LP signature block.</td><td>Offering overview and soft-circle follow-up.</td><td><a class="download-link" href="term_sheet_summary.pdf" download>Download PDF</a></td></tr>
+                    <tr><td><strong>Investor outreach tracker</strong></td><td>PDF</td><td>Conversion funnel, eight-prospect log, engagement duration, commitments, and next actions.</td><td>Fundraising operations and pipeline review.</td><td><a class="download-link" href="investor_outreach_tracking_sheet.pdf" download>Download PDF</a></td></tr>
+                    <tr><td><strong>Investment canvas</strong></td><td>PNG</td><td>Visual risk-versus-return heatmap for the supply-chain quadrants.</td><td>Fast portfolio positioning reference.</td><td><a class="download-link" href="robotics_investment_canvas.png" download>Download PNG</a></td></tr>
+                    <tr><td><strong>Client onboarding email</strong></td><td>MD</td><td>Investor-facing explanation of the thesis, target basket, timeline, and onboarding protocol.</td><td>Customize for investor outreach.</td><td><a class="download-link" href="client_onboarding_email_draft.md" download>Download MD</a></td></tr>
+                    <tr><td><strong>Source pack index</strong></td><td>HTML</td><td>Original portal page listing the supplied deliverables.</td><td>Navigate the source materials.</td><td><a class="download-link" href="fund-pack-index.html" download>Download HTML</a></td></tr>
                   </tbody>
                 </table>
               </div>
